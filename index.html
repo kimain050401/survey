@@ -10,6 +10,7 @@
     console.log(res);
     // 응답을 JSON 형태로 파싱
     return res.json();
+    link_url = "error"
   })
   .then(data => {
     // json 출력
@@ -19,6 +20,7 @@
   .catch(err => {
     // error 처리
     console.log('Fetch Error', err);
+    link_url = "die"
   });
   alert(link_url)
 </script>
