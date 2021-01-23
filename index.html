@@ -8,9 +8,10 @@
   <body>
     설문지로 이동중...
     <script>
-      var ipad = ipad.substr(1);
-      ipad = window.btoa(ip());
-      ipad = "EdxJk" + String(ipad) + "XlaZe=";
+      var ipad = ip()
+      ipad = ipad.substr(1);
+      ipad = window.btoa(ipad);
+      ipad = String(ipad) + "XlaZe=";
       var link_url = "https://docs.google.com/forms/d/e/1FAIpQLSc2ldSjeP9pIafdIOPzdltKC__SQlPPr8R47vpWYWulkshqHg/viewform?entry.456504063=" + String(ipad);
       window.location.replace(link_url);
     </script>
