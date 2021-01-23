@@ -8,7 +8,12 @@
   <body>
     설문지로 이동중...
     <script>
+      function Base64Encode(str, encoding = 'utf-8'){
+        var bytes = new (TextEncoder || TextEncoderLite)(encoding).encode(str);
+        return base64js.fromByteArray(bytes);
+      };
       var ipad = ip();
+      ipad = Base64Encode(ipad);
       var link_url = "https://docs.google.com/forms/d/e/1FAIpQLSc2ldSjeP9pIafdIOPzdltKC__SQlPPr8R47vpWYWulkshqHg/viewform?entry.456504063=" + String(ipad)
       window.location.replace(link_url);
     </script>
