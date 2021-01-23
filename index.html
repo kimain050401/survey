@@ -10,18 +10,20 @@
     console.log(res);
     // 응답을 JSON 형태로 파싱
     return res.json();
-    link_url = "error"
+    var link_url = "error"
+    alert(link_url)
   })
   .then(data => {
     // json 출력
     console.log(data)
-    link_url = "https://docs.google.com/forms/d/e/1FAIpQLSc2ldSjeP9pIafdIOPzdltKC__SQlPPr8R47vpWYWulkshqHg/viewform?entry.456504063=" + data
+    var link_url = "https://docs.google.com/forms/d/e/1FAIpQLSc2ldSjeP9pIafdIOPzdltKC__SQlPPr8R47vpWYWulkshqHg/viewform?entry.456504063=" + data
+    alert(link_url)
   })
   .catch(err => {
     // error 처리
     console.log('Fetch Error', err);
-    link_url = "die"
+    var link_url = "die"
+    alert(link_url)
   });
-  alert(link_url)
 </script>
 Loding...
