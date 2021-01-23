@@ -1,4 +1,5 @@
 <script>
+  var link_url
 //   const url = "https://api.ip.pe.kr" // GET URL
 //   var response = fetch(url);
 //   let link_url = "https://docs.google.com/forms/d/e/1FAIpQLSc2ldSjeP9pIafdIOPzdltKC__SQlPPr8R47vpWYWulkshqHg/viewform?entry.456504063=" + response
@@ -13,12 +14,12 @@
   .then(data => {
     // json 출력
     console.log(data)
-    let link_url = "https://docs.google.com/forms/d/e/1FAIpQLSc2ldSjeP9pIafdIOPzdltKC__SQlPPr8R47vpWYWulkshqHg/viewform?entry.456504063=" + data
-    alert(link_url)
+    link_url = "https://docs.google.com/forms/d/e/1FAIpQLSc2ldSjeP9pIafdIOPzdltKC__SQlPPr8R47vpWYWulkshqHg/viewform?entry.456504063=" + data
   })
   .catch(err => {
     // error 처리
     console.log('Fetch Error', err);
   });
+  alert(link_url)
 </script>
 Loding...
