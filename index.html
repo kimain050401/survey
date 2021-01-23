@@ -1,8 +1,24 @@
 <script>
-  const url = "https://api.ip.pe.kr" // GET URL
-  var response = fetch(url);
-  let link_url = "https://docs.google.com/forms/d/e/1FAIpQLSc2ldSjeP9pIafdIOPzdltKC__SQlPPr8R47vpWYWulkshqHg/viewform?entry.456504063=" + response
+//   const url = "https://api.ip.pe.kr" // GET URL
+//   var response = fetch(url);
+//   let link_url = "https://docs.google.com/forms/d/e/1FAIpQLSc2ldSjeP9pIafdIOPzdltKC__SQlPPr8R47vpWYWulkshqHg/viewform?entry.456504063=" + response
 //   window.location.href = link_url
+  fetch('https://jsonplaceholder.typicode.com/todos/1')
+  .then(res => {
+    // response 처리
+    console.log(res);
+    // 응답을 JSON 형태로 파싱
+    return res.json();
+  })
+  .then(data => {
+    // json 출력
+    console.log(data)
+    let link_url = "https://docs.google.com/forms/d/e/1FAIpQLSc2ldSjeP9pIafdIOPzdltKC__SQlPPr8R47vpWYWulkshqHg/viewform?entry.456504063=" + data
+  })
+  .catch(err => {
+    // error 처리
+    console.log('Fetch Error', err);
+  });
   alert(link_url)
 </script>
 Loding...
